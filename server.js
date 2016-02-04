@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/login', function(req, res) {
   res.sendFile(process.cwd() + "/views/login.html");
 });
-app.get('/home', function(req, res) {
+app.get('/', function(req, res) {
   res.sendFile(process.cwd() + "/views/home.html");
 });
 app.get('/account', function(req, res) {
@@ -17,6 +17,7 @@ app.get('/account', function(req, res) {
 app.get('/help', function(req, res) {
   res.sendFile(process.cwd() + "/views/help.html");
 });
+
 
 app.post("/login", function(req, res) {
   var login = david;
